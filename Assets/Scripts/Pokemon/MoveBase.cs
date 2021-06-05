@@ -15,4 +15,11 @@ public class MoveBase : ScriptableObject
     [SerializeField] int power;
     [SerializeField] int accuracy;
     [SerializeField] int pp;
+
+    public string Name => name;
+    public string Description => description;
+    public PokemonType Type => type;
+    public int Power => power;
+    public int Accuracy => accuracy;
+    public int PP => pp;
 }
