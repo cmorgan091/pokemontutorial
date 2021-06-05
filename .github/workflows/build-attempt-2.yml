@@ -1,8 +1,9 @@
 name: Build attempt 2
  
 on:
-  pull_request: {}
-  push: { branches: [master] }
+  #pull_request: {}
+  #push: { branches: [master] }
+  workflow_dispatch:
  
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
