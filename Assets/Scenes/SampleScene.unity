@@ -1364,7 +1364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 10.23, y: 0}
+  m_AnchoredPosition: {x: 10.229996, y: 0}
   m_SizeDelta: {x: -27.718979, y: 10.74605}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265179363
@@ -1415,6 +1415,7 @@ GameObject:
   - component: {fileID: 366678347}
   - component: {fileID: 366678349}
   - component: {fileID: 366678348}
+  - component: {fileID: 366678350}
   m_Layer: 0
   m_Name: PlayerHud
   m_TagString: Untagged
@@ -1481,6 +1482,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366678346}
   m_CullTransparentMesh: 0
+--- !u!114 &366678350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366678346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cbd097f7ae44b4449c8d18ffc9f5501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 440351194}
+  levelText: {fileID: 1413147579}
+  hpBar: {fileID: 1288001948}
 --- !u!1 &440351192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1708,7 @@ GameObject:
   - component: {fileID: 566866165}
   - component: {fileID: 566866167}
   - component: {fileID: 566866166}
+  - component: {fileID: 566866168}
   m_Layer: 0
   m_Name: PlayerUnit
   m_TagString: Untagged
@@ -1755,6 +1772,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566866164}
   m_CullTransparentMesh: 0
+--- !u!114 &566866168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566866164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f788396e5269ef740a6294ab0e1faa32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _base: {fileID: 11400000, guid: f52ff8c91ecb7924abdd29456b95705e, type: 2}
+  level: 7
+  isPlayerUnit: 1
 --- !u!1 &645724304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,6 +1984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 774783652}
+  - component: {fileID: 774783653}
   m_Layer: 0
   m_Name: BattleSystem
   m_TagString: Untagged
@@ -1975,6 +2008,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &774783653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774783651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8c23413328306428c3aacf363a943c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUnit: {fileID: 566866168}
+  playerHud: {fileID: 366678350}
 --- !u!1 &953888479
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,6 +5925,7 @@ GameObject:
   - component: {fileID: 1288001945}
   - component: {fileID: 1288001947}
   - component: {fileID: 1288001946}
+  - component: {fileID: 1288001948}
   m_Layer: 0
   m_Name: HPBar
   m_TagString: Untagged
@@ -5944,6 +5992,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288001944}
   m_CullTransparentMesh: 0
+--- !u!114 &1288001948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288001944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc7bf3b90850c14c97756f650ef927d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 1924255053}
 --- !u!1 &1407562612
 GameObject:
   m_ObjectHideFlags: 0
@@ -6471,7 +6532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 24.09, y: 0.0000076293945}
+  m_AnchoredPosition: {x: 24.089996, y: 0.0000076293945}
   m_SizeDelta: {x: -27.720001, y: 10.74605}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1924255055
